@@ -1,0 +1,12 @@
+<div *ngIf="product" class="d-flex flex-column" style="width: 100%">
+  <div class="product-image">
+    <img style="max-height: 200px;" [src]="product.thumbnail">
+  </div>
+
+  <div class="product-info">
+    <p>{{product.title}}<br><small>{{product.category}}</small></p>
+    <p>{{product.price | currency}}</p>
+    <cart-add-button [product]="product"></cart-add-button>
+  </div>
+
+</div>

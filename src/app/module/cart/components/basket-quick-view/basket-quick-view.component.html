@@ -1,0 +1,14 @@
+
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalCenterTitle">Shopping cart</h5>
+  <button type="button" class="close" (click)="closePopup()" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" tabindex="0" ngbAutofocus>
+  <cart-basket></cart-basket>
+  <cart-basket-summary></cart-basket-summary>
+</div>
+<div class="modal-footer">
+  <a (click)="viewCart()"> View cart</a>
+</div>

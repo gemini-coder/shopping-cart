@@ -1,0 +1,29 @@
+<h4 *ngIf="basketItems.length === 0">
+  There are no items in your basket
+</h4>
+<div *ngIf="basketItems.length > 0">
+  <table class="table">
+    <thead>
+      <th>Item name</th>
+      <th>Price</th>
+      <th>Savings</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of basketItems; let i = index;">
+        <td>{{item.product.title}}</td>
+        <td>
+          <span [ngStyle]="{
+        'text-decoration': item.product.discountPercentage > 0 ? 'line-through' : 'none',
+        'color': item.product.discountPercentage > 0 ? 'red' : 'inherit'
+      }">{{item.unitPrice | currency }}</span>
+          <span *ngIf="item.product.discountPercentage > 0">{{item.lineAfterDiscounts | currency }}</span>
+        </td>
+        <td><small *ngIf="item.product.discountPercentage > 0">Saving {{item.product.discountPercentage}}%</small></td>
+        <td><a (click)="removeItem(i)" class="text-danger">Remove</a></td>
+      </tr>
+    </tbody>
+
+  </table>
+  <hr>
+</div>
