@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CartRoutingModule } from './cart-routing.module';
 import { CartPageComponent } from './cart-page/cart-page.component';
-import {CartModule} from 'src/app/module/cart/cart.module';
+import {CartModule} from '../../module/cart/cart.module';
 
 
 @NgModule({
