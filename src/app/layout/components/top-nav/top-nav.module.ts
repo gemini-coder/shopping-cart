@@ -4,8 +4,7 @@ import { TopNavComponent } from './top-nav.component';
 import {RouterModule} from '@angular/router';
 import {PipesModule} from '../../../core/pipes/pipes.module';
 import {CartModule} from '../../../module/cart/cart.module';
-
-
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,8 @@ import {CartModule} from '../../../module/cart/cart.module';
     CommonModule,
     RouterModule,
     PipesModule,
-    CartModule
+    CartModule,
+    FlexLayoutModule
   ],
   exports:[
     TopNavComponent
